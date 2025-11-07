@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothi Modernization Proposal</title>
+    
+    <!-- Using Tailwind CSS for rapid, modern UI design --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Lexend (Headers) and Inter (Body) --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lexend:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Applying the custom fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background (Slate-50) */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lexend', sans-serif;
+        }
+        
+        /* Custom Accent Colors */
+        .text-primary { color: #2563eb; } /* Blue-600 */
+        .bg-primary { background-color: #2563eb; }
+        .text-secondary { color: #0f172a; } /* Slate-900 */
+        .text-body { color: #334155; } /* Slate-700 */
+
+        /* Gradient text for hero */
+        .hero-text-gradient {
+            background: linear-gradient(45deg, #0f172a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Gradient background for CTA and advise card */
+        .bg-primary-gradient {
+            background: linear-gradient(to right, #2563eb, #4f46e5);
+        }
+        
+        .hover-card {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* Animation class for scroll-in effect */
+        .scroll-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-body">
+
+    <!-- 
+      Navigation Bar 
+      - Sticky, for a professional website feel
+      - Provides smooth-scroll links to sections
+      - Contact Us button removed
+    --><nav class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h2 class="text-2xl font-bold text-secondary">Nothi Modernization</h2>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#problem" class="font-medium text-gray-600 hover:text-primary transition-colors">The Problem</a>
+                <a href="#solution" class="font-medium text-gray-600 hover:text-primary transition-colors">Our Solution</a>
+                <a href="#features" class="font-medium text-gray-600 hover:text-primary transition-colors">Features</a>
+                <a href="#foundation" class="font-medium text-gray-600 hover:text-primary transition-colors">Foundation</a>
+                <a href="#numbers" class="font-medium text-gray-600 hover:text-primary transition-colors">By the Numbers</a>
+                <a href="#advice" class="font-medium text-gray-600 hover:text-primary transition-colors">Our Advice</a>
+                <a href="#impact" class="font-medium text-gray-600 hover:text-primary transition-colors">Impact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        
+        <!-- 
+          Section 1: Hero
+          - Full-screen, high-impact intro
+        --><section id="home" class="h-screen flex items-center justify-center text-center bg-white px-4">
+            <div class="scroll-fade-in is-visible">
+                <h1 class="text-6xl md:text-8xl font-extrabold hero-text-gradient">Modernizing Nothi</h1>
+                <p class="text-xl md:text-2xl text-body mt-6 max-w-3xl mx-auto">A proposal to enhance performance, simplify workflows, and integrate intelligent solutions for the Government.</p>
+                <div class="mt-10">
+                    <a href="#problem" class="bg-primary-gradient text-white px-8 py-3 rounded-lg font-bold text-lg hover:opacity-90 transition-transform hover:scale-105 inline-block shadow-lg">See the Challenge</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+          Section 2: The Problem
+          - Uses icon cards to highlight the 4 core frustrations (Management-friendly terms)
+        --><section id="problem" class="py-20 px-4">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">The Current Challenge</h2>
+                    <p class="text-lg text-body mt-4">Understanding the core frustrations and bottlenecks in the existing Nothi system.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg scroll-fade-in hover-card">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-2">Slow & Unreliable</h3>
+                        <p>Constant delays and system freezes cause significant frustration and hinder daily productivity.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg scroll-fade-in hover-card" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-2">Complex & Confusing</h3>
+                        <p>A complicated, non-intuitive interface leads to a difficult workflow and a steep learning curve.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg scroll-fade-in hover-card" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-2">Wasted Time</h3>
+                        <p>Slow data lookups and long wait times force staff to wait for the system to catch up to them.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg scroll-fade-in hover-card" style="transition-delay: 300ms;">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-2">Data Integrity Risks</h3>
+                        <p>Concerns over missing files and unreliable backups erode staff trust in the system's accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          RESTORED Section 3: Our Solution (3 Pillars)
+          - Uses icon cards to showcase the 3-pillar strategy
+        --><section id="solution" class="py-20 px-4 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">Our 3-Pillar Solution</h2>
+                    <p class="text-lg text-body mt-4">A modern approach built on Speed, Simplicity, and Intelligence to directly address all user frustrations.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 scroll-fade-in hover-card bg-white rounded-lg shadow-lg" style="transition-delay: 0ms;">
+                        <i class="fa-solid fa-rocket text-6xl text-primary mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Pillar 1: Performance First</h3>
+                        <p>A new foundation built for speed. Our 'Low Bandwidth First' approach ensures a fast, responsive platform, even on limited connections.</p>
+                    </div>
+                    <div class="text-center p-6 scroll-fade-in hover-card bg-white rounded-lg shadow-lg" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-sitemap text-6xl text-primary mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Pillar 2: Radical Simplicity</h3>
+                        <p>Replacing the complex UI with a clean, intuitive interface. Workflows will be simplified, automated, and visually clear.</p>
+                    </div>
+                    <div class="text-center p-6 scroll-fade-in hover-card bg-white rounded-lg shadow-lg" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-microchip text-6xl text-primary mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Pillar 3: AI-Powered Assistant</h3>
+                        <p>An intelligent partner for policy, grammar, and training. We are embedding AI to provide decision support and enhance communication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          RESTORED Section 4: Key Features (Deep Dive)
+        --><section id="features" class="py-24 px-4">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">Key Features in Detail</h2>
+                    <p class="text-lg text-body mt-4">Here’s how our 3-Pillar Solution translates into tangible features that solve your problems.</p>
+                </div>
+
+                <!-- Feature 1: Performance --><div class="grid md:grid-cols-2 gap-12 items-center mb-20 scroll-fade-in">
+                    <div>
+                         
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-semibold text-secondary mb-4">Pillar 1: Performance First</h3>
+                        <p class="text-body text-lg mb-4">Our 'Low Bandwidth First' approach is the priority. We will resolve the core issues that slow down work.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3">Eliminate frustrating delays and system freezes.</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3">Ensure data and files load instantly.</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3">Optimize for all devices, including mobile.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Simplicity --><div class="grid md:grid-cols-2 gap-12 items-center mb-20 scroll-fade-in">
+                    <div class="md:order-2">
+                         
+                    </div>
+                    <div class="md:order-1">
+                        <h3 class="text-3xl font-semibold text-secondary mb-4">Pillar 2: Radical Simplicity</h3>
+                        <p class="text-body text-lg mb-4">We will replace the complex UI with a clean, intuitive interface and automate repetitive tasks.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3">A clean, unified dashboard for all tasks.</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3">Automate repetitive data entry and routing.</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3">Reduce clicks and steps for all common actions.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3: AI --><div class="grid md:grid-cols-2 gap-12 items-center scroll-fade-in">
+                    <div>
+                         
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-semibold text-secondary mb-4">Pillar 3: AI-Powered Assistant</h3>
+                        <p class="text-body text-lg mb-4">Generative AI will be integrated to support users, not replace them, making the system smarter and easier to use.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3"><strong>AI Policy Advisor:</strong> Get instant advice based on policies.</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3"><strong>AI Grammar Check:</strong> Ensure professional communications.</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary w-6"></i><span class="ml-3"><strong>AI-Based Training:</strong> Onboard users with interactive tutorials.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+          RESTORED Section 5: Our Foundation
+          - A 2x2 grid to build trust
+        --><section id="foundation" class="py-20 px-4 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">Our Foundation: Trust & Usability</h2>
+                    <p class="text-lg text-body mt-4">A modern system is only as good as its foundation. We guarantee data safety and a seamless user experience.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-lg scroll-fade-in hover-card">
+                        <i class="fa-solid fa-database text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Reliable Data & Backups</h3>
+                        <p>Implementing a modern, multi-layered data architecture with automated, secure backups and disaster recovery protocols to ensure zero data loss.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg scroll-fade-in hover-card" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-shield-halved text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Enterprise-Grade Security</h3>
+                        <p>Adhering to the highest industry standards for data encryption, access control, and threat detection to protect sensitive government information.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg scroll-fade-in hover-card">
+                        <i class="fa-solid fa-users text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Seamless User Onboarding</h3>
+                        <p>A simplified, guided setup process to get users operational in minutes, not days. A system is only good if people can actually use it.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg scroll-fade-in hover-card" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-graduation-cap text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">AI-Powered Easy Training</h3>
+                        <p>Context-aware help and AI-driven tutorials that adapt to the user's role and learning pace, making training simple, fast, and available 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Section 6: By the Numbers
+          - This is the quantifiable benefits section for management.
+        --><section id="numbers" class="py-20 px-4 bg-slate-100">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">The Modernization: By the Numbers</h2>
+                    <p class="text-lg text-body mt-4">This project delivers tangible, measurable improvements to productivity, efficiency, and reliability.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg scroll-fade-in hover-card shadow-lg">
+                        <i class="fa-solid fa-gauge-high text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">&lt; 2 Second Load Time</h3>
+                        <p>Industry-standard page loads, even on low-bandwidth networks, ending user frustration.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg scroll-fade-in hover-card shadow-lg" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-person-running text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">&lt; 2 Hour Onboarding</h3>
+                        <p>AI-guided training gets new hires productive on day one, dramatically reducing training overhead.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg scroll-fade-in hover-card shadow-lg" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-clock-rotate-left text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">40% Time Saved</h3>
+                        <p>Estimated time saved on repetitive tasks (routing, grammar) as AI automates manual work.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg scroll-fade-in hover-card shadow-lg">
+                        <i class="fa-solid fa-computer-mouse text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">50% Click Reduction</h3>
+                        <p>Simplified processes and a unified dashboard will cut clicks for common tasks in half.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg scroll-fade-in hover-card shadow-lg" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-check-double text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Improved Decisions</h3>
+                        <p>AI Policy & Grammar checks ensure communications are accurate, professional, and policy-compliant.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg scroll-fade-in hover-card shadow-lg" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-database text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">&lt; 4 Hour Restore</h3>
+                        <p>Full system recovery from disaster, with automated backups ensuring data is never lost.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Section 7: Strategic Advice
+          - This is the "advisor" section to build trust
+        --><section id="advice" class="py-20 px-4">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">Strategic Advice for a Smooth Transition</h2>
+                    <p class="text-lg text-body mt-4">Technology is only half the solution. Success depends on user adoption.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-xl border border-gray-100 scroll-fade-in">
+                    <div class="md:flex gap-8 items-center">
+                        <div class="text-center md:text-left mb-6 md:mb-0">
+                            <i class="fa-solid fa-users-gear text-8xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-secondary mb-4">Our Recommendation: Focus on People First</h3>
+                            <p class="text-body mb-4">A new system this large is a change management challenge. To guarantee success, we must build trust and momentum from day one.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start"><i class="fa-solid fa-star text-yellow-500 w-6 mt-1"></i><span class="ml-3"><strong>Deliver "Quick Wins":</strong> Our phased plan prioritizes solving the *speed* and *UI* issues first. When users feel an immediate positive impact, they will champion the new system.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-user-check text-green-500 w-6 mt-1"></i><span class="ml-3"><strong>Create "User Champions":</strong> We will help you identify key users from each department to be part of an early access program. They become super-users and advocates, training their peers and defusing resistance.</span></li>
+                            </ul>
+                            <p class="text-body mt-4 font-semibold">This approach mitigates the #1 risk in government IT projects: poor user adoption. We are not just vendors; we are partners in your success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Section 8: The Impact
+          - High-level value proposition
+        --><section id="impact" class="py-20 px-4 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12 scroll-fade-in">
+                    <h2 class="text-4xl font-bold text-secondary">The Impact of a Modern Partnership</h2>
+                    <p class="text-lg text-body mt-4">This isn't just a software update; it's a modernization of the entire government process.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-lg text-center scroll-fade-in hover-card">
+                        <i class="fa-solid fa-chart-line text-5xl text-primary mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Increased Productivity</h3>
+                        <p>Less time fighting the system, more time serving the public and achieving mission goals.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg text-center scroll-fade-in hover-card" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-face-smile text-5xl text-primary mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Improved Morale</h3>
+                        <p>Eliminating a core source of daily frustration for staff, creating a more positive work environment.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg text-center scroll-fade-in hover-card" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-shield-halved text-5xl text-primary mb-6"></i>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Future-Proof Platform</h3>
+                        <p>A scalable, secure, and intelligent foundation that can grow and adapt to future needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          REMOVED Section: Call to Action (Contact)
+        --></main>
+
+    <!-- 
+      Footer
+      - Standard website footer
+    --><footer class="py-10 bg-secondary text-gray-400 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+            <p class="mt-2">Proposal for Nothi Platform Modernization</p>
+        </div>
+    </footer>
+
+    <!-- 
+      JavaScript 
+      - Smooth scrolling for navigation
+      - Intersection Observer for "animate on scroll"
+    --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Smooth Scrolling ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Don't prevent default for external links
+                    if (this.getAttribute('href').startsWith('#') && document.querySelector(this.getAttribute('href'))) {
+                        e.preventDefault();
+                        
+                        // Get navbar height
+                        const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+                        const targetElement = document.querySelector(this.getAttribute('href'));
+                        
+                        if (targetElement) {
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // --- Animate on Scroll (Intersection Observer) ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { // Corrected from isIntersectEcting
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { 
+                threshold: 0.1 // Triggers when 10% of the element is visible
+            });
+
+            // Observe all elements with the .scroll-fade-in class
+            document.querySelectorAll('.scroll-fade-in').forEach(el => {
+                observer.observe(el);
+            });
+            
+        });
+    </script>
+</body>
+</html>

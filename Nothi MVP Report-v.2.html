@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothi Modernization MVP Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Adding Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Use a deeper blue-gray */
+        }
+        
+        /* Custom styles for the report */
+        .report-content h3 {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #e5e7eb;
+        }
+        
+        .report-content h4 {
+            font-size: 1.125rem; /* 18px */
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #c7d2fe; /* A soft indigo accent */
+        }
+
+        .report-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .report-content ul ul {
+            list-style-type: circle;
+            margin-top: 0.5rem;
+        }
+        .report-content li {
+            margin-bottom: 0.5rem;
+            color: #d1d5db; /* Lighter gray for list items */
+        }
+        
+        /* Custom border for section titles */
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #374151; /* gray-700 */
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -1px; /* Sits on top of the border */
+            left: 0;
+            width: 75px;
+            height: 2px;
+            background-color: #22d3ee; /* cyan-400 */
+        }
+    </style>
+</head>
+<body class="text-gray-300 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-slate-800/90 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <i class="fas fa-layer-group text-cyan-400 text-xl"></i>
+                    <h1 class="text-xl font-bold text-white">Nothi Modernization MVP</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-1">
+                        <a href="#summary" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Summary</a>
+                        <a href="#scope" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Scope</a>
+                        <a href="#plan" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Plan</a>
+                        <a href="#risks" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Risks</a>
+                        <a href="#architecture" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Architecture</a>
+                        <a href="#team" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                        <a href="#roadmap" class="text-gray-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Roadmap</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Page Title & Core Mission -->
+        <section class="mb-12">
+            <h1 class="text-4xl font-bold text-white mb-4">On-Premises MVP Delivery Plan</h1>
+            <p class="text-xl text-gray-400 max-w-4xl">
+                An aggressive 12-week plan to deliver a high-performance foundation on your Oracle VM infrastructure, proving stability and value to build user trust.
+            </p>
+        </section>
+
+        <!-- "At a Glance" Dashboard -->
+        <section id="at-a-glance" class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Objective -->
+                <div class="bg-slate-800 rounded-lg p-6 border border-slate-700 shadow-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 rounded-full h-12 w-12 flex items-center justify-center border border-cyan-700">
+                            <i class="fa-solid fa-bullseye text-cyan-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-gray-400">Core Objective</div>
+                            <div class="text-2xl font-bold text-white">10 Core Workflows</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Timeline -->
+                <div class="bg-slate-800 rounded-lg p-6 border border-slate-700 shadow-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 rounded-full h-12 w-12 flex items-center justify-center border border-cyan-700">
+                            <i class="fa-solid fa-calendar-check text-cyan-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-gray-400">Timeline</div>
+                            <div class="text-2xl font-bold text-white">12 Weeks (3 Months)</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Team -->
+                <div class="bg-slate-800 rounded-lg p-6 border border-slate-700 shadow-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 rounded-full h-12 w-12 flex items-center justify-center border border-cyan-700">
+                            <i class="fa-solid fa-users text-cyan-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-gray-400">Core Team</div>
+                            <div class="text-2xl font-bold text-white">23 Members</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4: Technology -->
+                <div class="bg-slate-800 rounded-lg p-6 border border-slate-700 shadow-lg">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-cyan-900/50 rounded-full h-12 w-12 flex items-center justify-center border border-cyan-700">
+                            <i class="fa-solid fa-server text-cyan-300 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-gray-400">Environment</div>
+                            <div class="text-2xl font-bold text-white">100% On-Premises</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="bg-slate-800 shadow-2xl rounded-lg overflow-hidden border border-slate-700">
+            <div class="px-6 py-8 sm:p-10 report-content">
+
+                <!-- 1.0 Executive Summary -->
+                <section id="summary" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">Executive Summary</h2>
+                    <p class="mb-4 text-lg">This document outlines an aggressive 3-month (12-week) plan to deliver a Minimum Viable Product (MVP) for the Nothi Modernization project. The primary goal is to solve the platform's critical performance and usability issues for the 10 most common workflows.</p>
+                    <p class="mb-6 text-lg">We will build a new, high-performance foundation on your on-premises Oracle VM infrastructure using a modern, container-based (Kubernetes) architecture. This MVP will serve a pilot group of users and prove the new system's stability, speed, and value, building essential user trust for future phases.</p>
+                    <p class="mt-6 text-base italic text-gray-400">All other features (AI assistant, All workflows) are on the "Future Roadmap."</p>
+                </section>
+
+                <!-- 2.0 MVP Scope & Key Deliverables -->
+                <section id="scope" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">MVP Scope & Key Deliverables</h2>
+                    <p class="mb-6 text-lg">This 3-month project is laser-focused on what we can build, test, and deploy successfully.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- IN SCOPE -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-green-500/30">
+                            <h3 class="text-2xl font-semibold text-green-400 mb-4 flex items-center space-x-3">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span>Key Deliverables (In Scope)</span>
+                            </h3>
+                            
+                            <h4>On-Premises Production Infrastructure:</h4>
+                            <ul>
+                                <li>Fully configured Kubernetes (K8s) cluster on Oracle VMs.</li>
+                                <li>High-availability Oracle Database instance.</li>
+                                <li>On-premises object storage (MinIO).</li>
+                                <li>On-premises message queue (RabbitMQ).</li>
+                                <li>Secured API Gateway (Kong) & Identity (Keycloak) integrated with AD/LDAP.</li>
+                            </ul>
+
+                            <h4>Core Workflow MVP Application:</h4>
+                            <ul>
+                                <li>Fast, responsive web UI optimized for low-bandwidth.</li>
+                                <li>Backend microservices for ten (10) complete workflows.</li>
+                            </ul>
+
+                            <h4>Pilot User Go-Live:</h4>
+                            <ul>
+                                <li>Successful deployment for 50-100 pilot users.</li>
+                                <li>Training materials and support for pilot group.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- OUT OF SCOPE -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-red-500/30">
+                            <h3 class="text-2xl font-semibold text-red-400 mb-4 flex items-center space-x-3">
+                                <i class="fa-solid fa-times-circle"></i>
+                                <span>Out of Scope (Phase 2)</span>
+                            </h3>
+                            <p class="mb-4">To succeed, we must be ruthless about scope. The following are deferred to the Phase 2 roadmap:</p>
+                            <ul class="space-y-3">
+                                <li class="font-semibold text-red-300 text-lg"><i class="fa-solid fa-minus-circle mr-2"></i>NO AI Policy Advisor</li>
+                                <li class="font-semibold text-red-300 text-lg"><i class="fa-solid fa-minus-circle mr-2"></i>NO Low-code visual builder</li>
+                                <li class="font-semibold text-red-300 text-lg"><i class="fa-solid fa-minus-circle mr-2"></i>NO Migration of all workflows</li>
+                                <li class="font-semibold text-red-300 text-lg"><i class="fa-solid fa-minus-circle mr-2"></i>NO Full data migration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- 5.0 The 3-Month (12-Week) Detailed Plan -->
+                <section id="plan" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">The 12-Week Detailed Plan</h2>
+                    <p class="mb-8 text-lg">We will run six 2-week sprints, with a heavy emphasis on parallel development in Month 2.</p>
+
+                    <!-- Horizontal Timeline -->
+                    <div class="relative">
+                        <!-- The line -->
+                        <div class="absolute left-0 top-1/2 w-full h-1 bg-slate-700 -translate-y-1/2"></div>
+                        
+                        <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+                            
+                            <!-- Month 1 -->
+                            <div class="relative bg-slate-900/70 rounded-lg p-6 border-2 border-slate-700 shadow-xl z-10">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">WEEKS 1-4</div>
+                                <h3 class="text-xl font-bold text-cyan-400 mb-3 mt-4">Month 1: Foundation</h3>
+                                <p class="text-sm text-gray-400 mb-4"><strong>Goal:</strong> Build the "scaffolding" and finalize all specs.</p>
+                                <ul class="text-sm space-y-2 list-none p-0">
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Finalize 10 MVP workflows</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Provision K8s, DB, MinIO</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>CI/CD pipeline functional</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Login & Core Services (Auth, Doc)</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Month 2 -->
+                            <div class="relative bg-slate-900/70 rounded-lg p-6 border-2 border-slate-700 shadow-xl z-10">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">WEEKS 5-8</div>
+                                <h3 class="text-xl font-bold text-cyan-400 mb-3 mt-4">Month 2: Parallel Build</h3>
+                                <p class="text-sm text-gray-400 mb-4"><strong>Goal:</strong> Heads-down coding on all 10 workflows.</p>
+                                <ul class="text-sm space-y-2 list-none p-0">
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Backend logic for 10 workflows</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Frontend UI for all 10 flows</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>End-to-end integration</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>First end-to-end tests</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Month 3 -->
+                            <div class="relative bg-slate-900/70 rounded-lg p-6 border-2 border-slate-700 shadow-xl z-10">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">WEEKS 9-12</div>
+                                <h3 class="text-xl font-bold text-cyan-400 mb-3 mt-4">Month 3: Harden & Go-Live</h3>
+                                <p class="text-sm text-gray-400 mb-4"><strong>Goal:</strong> Stabilize, test, and deploy to pilot users.</p>
+                                <ul class="text-sm space-y-2 list-none p-0">
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Intensive bug fixing</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Performance & regression testing</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>User Acceptance Testing (UAT)</li>
+                                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i>Pilot Go-Live & Hypercare</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6.0 Key Risks & Mitigation -->
+                <section id="risks" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">Key Risks & Mitigation</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Risk 1 -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-red-500/30">
+                            <h3 class="text-lg font-semibold text-red-300 mb-2">Risk: Scope Creep</h3>
+                            <div class="text-xs font-medium text-red-200 bg-red-900/50 inline-block px-2 py-1 rounded mb-3">Likelihood: VERY HIGH</div>
+                            <p class="text-sm"><strong>Mitigation:</strong> A strict "No" policy is in effect. All new requests are added to the "Phase 2 Roadmap" backlog. The PM will relentlessly defend this scope.</p>
+                        </div>
+                        <!-- Risk 2 -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-yellow-500/30">
+                            <h3 class="text-lg font-semibold text-yellow-300 mb-2">Risk: Infrastructure Delays</h3>
+                            <div class="text-xs font-medium text-yellow-200 bg-yellow-900/50 inline-block px-2 py-1 rounded mb-3">Likelihood: HIGH</div>
+                            <p class="text-sm"><strong>Mitigation:</strong> DevOps and DBA teams start on Day 1. We must have full access to the Oracle VM environment immediately.</p>
+                        </div>
+                        <!-- Risk 3 -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-yellow-500/30">
+                            <h3 class="text-lg font-semibold text-yellow-300 mb-2">Risk: Team Burnout</h3>
+                            <div class="text-xs font-medium text-yellow-200 bg-yellow-900/50 inline-block px-2 py-1 rounded mb-3">Likelihood: HIGH</div>
+                            <p class="text-sm"><strong>Mitigation:</strong> This 3-month timeline is hyper-aggressive. We must ruthlessly de-scope any "gold plating" and focus only on the minimal viable path.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3.0 On-Premises Technical Architecture -->
+                <section id="architecture" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">On-Premises Technical Architecture</h2>
+                    <p class="mb-6 text-lg">We will adapt modern cloud-native concepts to run entirely within your data center on Oracle VM.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                            <h3 class="text-xl font-semibold text-white mb-3">Host & Orchestration</h3>
+                            <ul>
+                                <li><strong>Host:</strong> Government Data Center (GDC)</li>
+                                <li><strong>Virtualization:</strong> Oracle VM (OVM)</li>
+                                <li><strong>Orchestration:</strong> Kubernetes (K8s) Cluster</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                            <h3 class="text-xl font-semibold text-white mb-3">Data Tier (On-Prem)</h3>
+                            <ul>
+                                <li><strong>Database:</strong> Oracle (High Availability)</li>
+                                <li><strong>Storage:</strong> MinIO (S3-Compatible)</li>
+                                <li><strong>Messaging:</strong> RabbitMQ (in K8s)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                            <h3 class="text-xl font-semibold text-white mb-3">Security & Ingress</h3>
+                            <ul>
+                                <li><strong>Gateway:</strong> Kong (On-premises)</li>
+                                <li><strong>Identity:</strong> Keycloak (in K8s)</li>
+                                <li><strong>Integration:</strong> Gov LDAP/Active Directory</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700 mt-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Application Tier (Microservices)</h3>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                            <li>Authentication MS</li>
+                            <li>Config Server</li>
+                            <li>Document Upload MS</li>
+                            <li>Permissions MS</li>
+                            <li>Nothi Core (x10 Workflows)</li>
+                            <li>Email Service (Internal SMTP)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 4.0 The 23-Person MVP Team -->
+                <section id="team" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">The 23-Person MVP Team</h2>
+                    <p class="mb-6 text-lg">This team is structured by functional expertise to manage the parallel development of 10 workflows.</p>
+                    <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3 list-none p-0">
+                            <li><strong>Project Manager (1)</strong></li>
+                            <li><strong>Solution Architect/Tech Lead (1)</strong></li>
+                            <li><strong>Business Analyst (1)</strong></li>
+                            <li><strong>UI/UX Designers (3)</strong></li>
+                            <li><strong>Front-End Developers (4)</strong></li>
+                            <li><strong>Back-End Developers (6)</strong></li>
+                            <li><strong>DevOps Engineers (2)</strong></li>
+                            <li><strong>QA/Test Engineers (2)</strong></li>
+                            <li><strong>Security Specialist (1)</strong></li>
+                            <li><strong>Database Administrator (2)</strong></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 7.0 The Future Roadmap (After the MVP) -->
+                <section id="roadmap" class="mb-12">
+                    <h2 class="text-3xl font-bold text-white section-title">Future Roadmap (After MVP)</h2>
+                    <p class="mb-8 text-lg">The successful launch of this MVP unlocks the rest of the project.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Phase 2 -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700 relative">
+                            <div class="text-cyan-400 font-bold text-sm mb-2">PHASE 2</div>
+                            <h3 class="text-xl font-semibold text-white m-0">Workflow Expansion</h3>
+                            <p class="text-sm mt-3">Begin migrating the remaining workflows and build the low-code workflow engine.</p>
+                        </div>
+                        <!-- Phase 3 -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700 relative">
+                            <div class="text-cyan-400 font-bold text-sm mb-2">PHASE 3</div>
+                            <h3 class="text-xl font-semibold text-white m-0">AI & Intelligence</h3>
+                            <p class="text-sm mt-3">With a stable foundation, integrate the AI Policy Advisor and Smart Search features.</p>
+                        </div>
+                        <!-- Phase 4 -->
+                        <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700 relative">
+                            <div class="text-cyan-400 font-bold text-sm mb-2">PHASE 4</div>
+                            <h3 class="text-xl font-semibold text-white m-0">Full Rollout</h3>
+                            <p class="text-sm mt-3">Begin a phased rollout to all users and create a plan to decommission the old system.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-500 text-sm">Nothi Modernization MVP Plan</p>
+        </div>
+    </footer>
+
+</body>
+</html>
